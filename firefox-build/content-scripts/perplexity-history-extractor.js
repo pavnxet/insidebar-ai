@@ -1,11 +1,10 @@
-(function() {
 // Firefox-compatible helper: safely set innerHTML using DOMParser
 function setHTML(el, html) {
   const doc = new DOMParser().parseFromString('<!DOCTYPE html><html><body>' + html + '</body>', 'text/html');
   el.replaceChildren(...Array.from(doc.body.childNodes));
 }
 
-ity Conversation History Extractor
+// Perplexity Conversation History Extractor
 // Extracts current conversation from Perplexity DOM and saves to extension
 //
 // IMPORTANT: Requires conversation-extractor-utils.js to be loaded first
@@ -80,7 +79,7 @@ ity Conversation History Extractor
         </div>
         <div class="relative truncate text-center px-1 leading-loose -mb-px" data-label="save">${text}</div>
       </div>
-    `;
+    `);
 
     button.addEventListener('click', handleSaveClick);
     return button;

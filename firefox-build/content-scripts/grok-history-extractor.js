@@ -1,11 +1,10 @@
-(function() {
 // Firefox-compatible helper: safely set innerHTML using DOMParser
 function setHTML(el, html) {
   const doc = new DOMParser().parseFromString('<!DOCTYPE html><html><body>' + html + '</body>', 'text/html');
   el.replaceChildren(...Array.from(doc.body.childNodes));
 }
 
-nversation History Extractor
+// Grok Conversation History Extractor
 // Extracts current conversation from Grok DOM and saves to extension
 //
 // IMPORTANT: Requires conversation-extractor-utils.js and language-detector.js to be loaded first
@@ -165,7 +164,7 @@ nversation History Extractor
         </svg>
       </span>
       <span class="font-semibold" data-test-id="save-label">${text}</span>
-    `;
+    `);
 
     button.addEventListener('click', handleSaveClick);
     return button;

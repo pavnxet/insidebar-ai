@@ -799,7 +799,7 @@ async function renderPromptList(prompts = null) {
         <p>No prompts yet</p>
         <p>Click "+ New" to create your first prompt</p>
       </div>
-    `;
+    `);
     return;
   }
 
@@ -856,7 +856,7 @@ async function renderPromptList(prompts = null) {
         ${prompt.useCount > 0 ? `<span>Used ${prompt.useCount}×</span>` : ''}
       </div>
     </div>
-  `).join('');
+  `).join(''));
 
   // Add event listeners
   listContainer.querySelectorAll('.prompt-item').forEach(item => {
@@ -924,7 +924,7 @@ async function updateCategoryFilter() {
   const popup = document.getElementById('category-popup');
 
   setHTML(popup, '<div class="category-popup-item selected" data-value="">All Categories</div>' +
-    categories.map(cat => `<div class="category-popup-item" data-value="${escapeHtml(cat)}">${escapeHtml(cat)}</div>`).join('');
+    categories.map(cat => `<div class="category-popup-item" data-value="${escapeHtml(cat)}">${escapeHtml(cat)}</div>`).join(''));
 }
 
 function openPromptEditor(promptId = null) {
@@ -1200,7 +1200,7 @@ function renderQuickAccessSection(containerId, prompts, emptyMessage) {
         </div>
       </div>
     `;
-  }).join('');
+  }).join(''));
 
   // Add click listeners
   container.querySelectorAll('.quick-access-item').forEach(item => {
@@ -1414,7 +1414,7 @@ async function updateWorkspaceProviderSelector() {
       <img class="provider-icon-small" src="${useDarkIcons && provider.iconDark ? provider.iconDark : provider.icon}" alt="${escapeHtml(provider.name)}">
       <span>${escapeHtml(provider.name)}</span>
     </div>
-  `).join('');
+  `).join(''));
 }
 
 function showWorkspaceWithText(text) {
@@ -1704,7 +1704,7 @@ async function renderConversationList(conversations = null) {
         <p>No conversations yet</p>
         <p>Click "+" to save a conversation</p>
       </div>
-    `;
+    `);
     return;
   }
 
@@ -1765,7 +1765,7 @@ async function renderConversationList(conversations = null) {
         </div>
       </div>
     `;
-  }).join('');
+  }).join(''));
 
   // Add event listeners
   listContainer.querySelectorAll('.conversation-item').forEach(item => {
@@ -1820,7 +1820,7 @@ async function updateProviderFilter() {
   setHTML(popup, '<div class="provider-popup-item selected" data-value="">All Providers</div>' +
     filterableProviders.map(provider =>
       `<div class="provider-popup-item" data-value="${escapeHtml(provider.id)}">${escapeHtml(provider.name)}</div>`
-    ).join('');
+    ).join(''));
 }
 
 function closeSaveConversationModal() {
@@ -2113,7 +2113,7 @@ function loadSearchHistory() {
 
     setHTML(datalist, history.map(query =>
       `<option value="${escapeHtml(query)}">`
-    ).join('');
+    ).join(''));
   } catch (error) {
     console.error('Error loading search history:', error);
   }

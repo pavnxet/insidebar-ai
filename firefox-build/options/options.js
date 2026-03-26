@@ -241,7 +241,7 @@ async function renderProviderList() {
         <div class="toggle-switch ${isEnabled ? 'active' : ''}" data-provider-id="${provider.id}"></div>
       </div>
     `;
-  }).join('');
+  }).join(''));
 
   // Add click listeners to toggles
   listContainer.querySelectorAll('.toggle-switch').forEach(toggle => {

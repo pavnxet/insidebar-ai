@@ -1,11 +1,10 @@
-(function() {
 // Firefox-compatible helper: safely set innerHTML using DOMParser
 function setHTML(el, html) {
   const doc = new DOMParser().parseFromString('<!DOCTYPE html><html><body>' + html + '</body>', 'text/html');
   el.replaceChildren(...Array.from(doc.body.childNodes));
 }
 
- Conversation History Extractor
+// ChatGPT Conversation History Extractor
 // Extracts current conversation from ChatGPT.com DOM and saves to extension
 //
 // IMPORTANT: Requires conversation-extractor-utils.js to be loaded first
@@ -73,7 +72,7 @@ function setHTML(el, html) {
         </svg>
         ${text}
       </div>
-    `;
+    `);
     button.title = tooltip;
     button.addEventListener('click', handleSaveClick);
 

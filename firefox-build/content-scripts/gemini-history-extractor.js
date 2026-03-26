@@ -1,11 +1,10 @@
-(function() {
 // Firefox-compatible helper: safely set innerHTML using DOMParser
 function setHTML(el, html) {
   const doc = new DOMParser().parseFromString('<!DOCTYPE html><html><body>' + html + '</body>', 'text/html');
   el.replaceChildren(...Array.from(doc.body.childNodes));
 }
 
-Conversation History Extractor
+// Gemini Conversation History Extractor
 // Extracts current conversation from Gemini DOM and saves to extension
 //
 // IMPORTANT: Requires conversation-extractor-utils.js to be loaded first
@@ -80,7 +79,7 @@ Conversation History Extractor
       </span>
       <span class="mat-focus-indicator"></span>
       <span class="mat-mdc-button-touch-target"></span>
-    `;
+    `);
 
     button.addEventListener('click', handleSaveClick);
     return button;

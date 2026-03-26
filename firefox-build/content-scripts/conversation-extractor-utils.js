@@ -323,7 +323,7 @@ function setHTML(el, html) {
           </button>
         </div>
       </div>
-    `;
+    `);
 
     document.body.appendChild(modal);
 
